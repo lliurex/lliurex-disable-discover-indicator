@@ -1,0 +1,30 @@
+#!/bin/sh
+
+set -e
+
+#VARS
+DEFAULT_DISCOVER_METADATA_FILE="/usr/share/plasma/plasmoids/org.kde.discovernotifier/metadata.desktop"
+DISCOVER_METADATA_FILE_LLIUREX="/usr/share/lliurex-disable-discover-indicator/llx-discovernotifier-metadata.desktop"
+PACKAGE_NAME="lliurex-disable-discover-indicator"
+
+case "$1" in
+   configure)
+		if [ -f $DEFAULT_DISCOVER_METADATA_FILE ];then
+			if dpkg-divert --package ${PACKAGE_NAME} --add  --rename  --divert ${DEFAULT_DISCOVER_METADATA_FILE}.diverted ${DEFAULT_DISCOVER_METADATA_FILE} ; then
+				ln -fs ${DISCOVER_METADATA_FILE_LLIUREX} ${DEFAULT_DISCOVER_METADATA_FILE}
+   			else
+   				echo "Unable to divert file \"$SWING_FILE_OPENJDK8\"" >&2
+			fi
+		fi	
+   				
+   ;;
+
+   abort-upgrade|abort-remove|abort-deconfigure)
+   ;;
+
+   *)
+       exit 1
+   ;;
+esac
+
+#DEBHELPER#
