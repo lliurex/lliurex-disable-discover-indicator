@@ -1,3 +1,9 @@
+lliurex-disable-discover-indicator (0.2) bionic; urgency=medium
+
+  * Fixed performance
+   
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Fri, 13 Sep 2019 10:29:34 +0200
+
 lliurex-disable-discover-indicator (0.1) bionic; urgency=medium
 
   * Initial release.
