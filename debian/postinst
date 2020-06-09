@@ -8,6 +8,8 @@ DEFAULT_DISCOVER_METADATA_JSON="/usr/share/plasma/plasmoids/org.kde.discovernoti
 DISCOVER_METADATA_FILE_LLIUREX="/usr/share/lliurex-disable-discover-indicator/llx-discovernotifier-metadata.desktop"
 DISCOVER_METADATA_JSON_LLIUREX="/usr/share/lliurex-disable-discover-indicator/llx-discovernotifier-metadata.json"
 DEFAULT_DISCOVER_AUTOSTART="/etc/xdg/autostart/org.kde.discover.notifier.desktop"
+LLX_DISCOVER_AUTOSTART_DIVERSION="/etc/xdg/autostart/org.kde.discover.notifier.desktop.diverted"
+
 
 PACKAGE_NAME="lliurex-disable-discover-indicator"
 
@@ -29,8 +31,8 @@ case "$1" in
 			fi
 		fi	
 
-		if [ -f $DEFAULT_DISCOVER_AUTOSTART ];then
-			dpkg-divert --package ${PACKAGE_NAME} --add  --rename  --divert ${DEFAULT_DISCOVER_AUTOSTART}.diverted ${DEFAULT_DISCOVER_AUTOSTART} || true
+		if ! [ -f $LLX_DISCOVER_AUTOSTART_DIVERSION ];then
+			dpkg-divert --package ${PACKAGE_NAME} --add  --rename  --divert ${LLX_DISCOVER_AUTOSTART_DIVERSION} ${DEFAULT_DISCOVER_AUTOSTART} || true
 		fi	
    ;;
 

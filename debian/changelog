@@ -1,3 +1,9 @@
+lliurex-disable-discover-indicator (0.4) bionic; urgency=medium
+
+  * Fixed postinst to ensure diversion is done
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Tue, 09 Jun 2020 16:27:50 +0200
+
 lliurex-disable-discover-indicator (0.3) bionic; urgency=medium
 
   * Added diversion to discover notifier in Plasma 5.18
