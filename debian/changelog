@@ -1,3 +1,9 @@
+lliurex-disable-discover-indicator (0.14) focal; urgency=medium
+
+  * Initial release for focal
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Wed, 23 Sep 2020 14:50:07 +0200
+
 lliurex-disable-discover-indicator (0.4.1) bionic; urgency=medium
 
   * Fixed postinst error message
