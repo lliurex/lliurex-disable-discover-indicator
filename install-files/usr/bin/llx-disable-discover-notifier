@@ -1,0 +1,3 @@
+#!/bin/sh
+
+systemctl --user stop app-org.kde.discover.notifier.desktop.diverted@autostart.service || true
