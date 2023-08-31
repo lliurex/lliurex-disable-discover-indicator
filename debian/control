@@ -1,0 +1,13 @@
+Source: lliurex-disable-discover-indicator
+Section: admin
+Priority: optional
+Maintainer: Equipo LliureX <lliurex@gva.es>
+Uploaders: Equipo LliureX <lliurex@gva.es>
+Build-Depends: debhelper (>= 10)
+Standards-Version: 4.1.2
+
+Package: lliurex-disable-discover-indicator
+Architecture: all
+Depends:${shlibs:Depends}, ${misc:Depends}
+Description: Hide discovernotifier indicator
+ Package to hide discovernotifier indicator from the system tray (for new users)

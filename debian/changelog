@@ -1,0 +1,35 @@
+lliurex-disable-discover-indicator (0.14) focal; urgency=medium
+
+  * Initial release for focal
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Wed, 23 Sep 2020 14:50:07 +0200
+
+lliurex-disable-discover-indicator (0.4.1) bionic; urgency=medium
+
+  * Fixed postinst error message
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Thu, 27 Aug 2020 12:06:05 +0200
+
+lliurex-disable-discover-indicator (0.4) bionic; urgency=medium
+
+  * Fixed postinst to ensure diversion is done
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Tue, 09 Jun 2020 16:27:50 +0200
+
+lliurex-disable-discover-indicator (0.3) bionic; urgency=medium
+
+  * Added diversion to discover notifier in Plasma 5.18
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Tue, 12 May 2020 18:01:50 +0200
+
+lliurex-disable-discover-indicator (0.2) bionic; urgency=medium
+
+  * Fixed performance
+   
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Fri, 13 Sep 2019 10:29:34 +0200
+
+lliurex-disable-discover-indicator (0.1) bionic; urgency=medium
+
+  * Initial release.
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Thu, 29 Aug 2019 13:37:37 +0200
