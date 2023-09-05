@@ -2,26 +2,13 @@
 set -e
 
 #VARS
-DEFAULT_DISCOVER_METADATA_FILE="/usr/share/plasma/plasmoids/org.kde.discovernotifier/metadata.desktop"
-DEFAULT_DISCOVER_METADATA_JSON="/usr/share/plasma/plasmoids/org.kde.discovernotifier/metadata.json"
-DISCOVER_METADATA_FILE_LLIUREX="/usr/share/lliurex-disable-discover-indicator/llx-discovernotifier-metadata.desktop"
-DISCOVER_METADATA_JSON_LLIUREX="/usr/share/lliurex-disable-discover-indicator/llx-discovernotifier-metadata.json"
 PACKAGE_NAME="lliurex-disable-discover-indicator"
 DEFAULT_DISCOVER_AUTOSTART="/etc/xdg/autostart/org.kde.discover.notifier.desktop"
 
 
 case $1 in 
         remove|purge|abort-install|disappear)
-                if [ -f ${DEFAULT_DISCOVER_METADATA_FILE}.diverted ] ; then
-                        rm -f ${DEFAULT_DISCOVER_METADATA_FILE}
-  					    dpkg-divert --package  ${PACKAGE_NAME} --rename --quiet --remove ${DEFAULT_DISCOVER_METADATA_FILE}|| true
-                fi
-
-                if [ -f ${DEFAULT_DISCOVER_METADATA_JSON}.diverted ] ; then
-                        rm -f ${DEFAULT_DISCOVER_METADATA_JSON}
-                        dpkg-divert --package  ${PACKAGE_NAME} --rename --quiet --remove ${DEFAULT_DISCOVER_METADATA_JSON}|| true
-                fi
-		
+               
                 if [ -f ${DEFAULT_DISCOVER_AUTOSTART}.diverted ] ; then
                        rm -f ${DEFAULT_DISCOVER_AUTOSTART}
                        dpkg-divert --package  ${PACKAGE_NAME} --rename --quiet --remove ${DEFAULT_DISCOVER_AUTOSTART}|| true
